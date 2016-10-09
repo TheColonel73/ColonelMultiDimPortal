@@ -1,5 +1,6 @@
-﻿using System.Data.Entity;
-
+﻿using System;
+using System.Data.Entity;
+using System.Linq;
 using RecruitAgency.Model;
 
 namespace RecruitAgency.Data
@@ -8,6 +9,11 @@ namespace RecruitAgency.Data
     {
         public PersonsRepository(DbContext dbContext) : base(dbContext)
         {
+        }
+
+        public IQueryable<JobOpportunity> GetJobs()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace RecruitAgency.Model
+﻿namespace RecruitAgency.Data
 {
     /// <summary>
     /// Interface for the Code Camper "Unit of Work"

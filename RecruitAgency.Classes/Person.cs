@@ -15,46 +15,25 @@ namespace RecruitAgency.Model
 
         public Person()
         {
-            DateCreated = DateTime.Now;
-            DateModified = DateTime.Now;
+            JobOpportunities = new List<JobOpportunity>();
+
         }
         public DateTime DateCreated
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get;
+            set;
         }
 
         public DateTime DateModified
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get;
+            set;
         }
 
         public bool IsDirty
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get;
+            set;
         }
 
         //[ForeignKey("Agency")]

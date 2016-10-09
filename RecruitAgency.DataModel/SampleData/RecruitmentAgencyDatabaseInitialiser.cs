@@ -3,7 +3,7 @@
 namespace RecruitAgency.Data.SampleData
 {
     public class RecruitmentAgencyDatabaseInitialiser:
-        DropCreateDatabaseIfModelChanges<RecruitAgencyDbContext>
+        DropCreateDatabaseAlways<RecruitAgencyDbContext>
     {
         public RecruitmentAgencyDatabaseInitialiser()
         {

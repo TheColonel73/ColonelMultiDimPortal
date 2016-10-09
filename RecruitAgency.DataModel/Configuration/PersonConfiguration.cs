@@ -1,10 +1,13 @@
 ﻿using RecruitAgency.Model;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.Infrastructure.Annotations;
 using System.Data.Entity.ModelConfiguration;
 
 namespace RecruitAgency.Data.Configuration
 {
     public class PersonConfiguration: EntityTypeConfiguration<Person>
     {
+        string uniqueIndex = "UN_PersonName";
         public PersonConfiguration()
         {
             ToTable("People");

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RecruitAgency.Model
 {
@@ -7,50 +9,29 @@ namespace RecruitAgency.Model
     {
         public Agency()
         {
-            DateCreated = DateTime.Now;
-            DateModified = DateTime.Now;
+            Persons = new List<Person>();
         }
         public DateTime DateCreated
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get;
+            set;
         }
 
         public DateTime DateModified
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get;
+            set;
         }
 
         public int ID { get; set; }
 
         public bool IsDirty
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get;
+            set;
         }
 
+        
         public string CompanyName { get; set; }
         public string Address { get; set; }
         public string Url { get; set; }

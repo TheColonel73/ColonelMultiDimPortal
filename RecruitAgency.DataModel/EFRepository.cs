@@ -35,7 +35,7 @@ namespace RecruitAgency.Data
             return DbSet.Find(id);
         }
 
-        public virtual void Add(T entity)
+        public virtual T Add(T entity)
         {
             DbEntityEntry dbEntityEntry = DbContext.Entry(entity);
             if (dbEntityEntry.State != EntityState.Detached)
@@ -44,8 +44,9 @@ namespace RecruitAgency.Data
             }
             else
             {
-                DbSet.Add(entity);
+                return DbSet.Add(entity);
             }
+            return entity;
         }
 
         public virtual void Update(T entity)
