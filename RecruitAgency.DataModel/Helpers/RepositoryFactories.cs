@@ -33,9 +33,9 @@ namespace RecruitAgency.Data
         {
             return new Dictionary<Type, Func<DbContext, object>>
                 {
-                   {typeof(IPersonsRepository), dbContext => new PersonsRepository(dbContext)},
+                   {typeof(IRecruiterRepository), dbContext => new RecruiterRepository(dbContext)},
                    {typeof(IAgenciesRepository), dbContext => new AgenciesRepository(dbContext)},
-                   {typeof(IJobsRepository), dbContext => new JobsRepository(dbContext)},
+                   {typeof(IOpportunityRepository), dbContext => new OpportunityRepository(dbContext)},
                 };
         }
 

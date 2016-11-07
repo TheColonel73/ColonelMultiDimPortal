@@ -1,12 +1,12 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 using RecruitAgency.Model;
 using RecruitAgency.Data;
 
 namespace UnitTestEntityProject
 {
-    [TestClass]
+    
     public class EntityTest
     {
         RecruitAgencyUow uow;
@@ -16,13 +16,13 @@ namespace UnitTestEntityProject
             uow = new RecruitAgencyUow(provider);
         }
 
-        [TestMethod]
+        [Fact]
         public void TestMethod1()
         {
             Agency agency = uow.Agencies.Add(new Agency { CompanyName = "Test DB" });
-            agency.Persons.Add(new Person { FirstName = "Gary", LastName = "Hodgson" });
+            agency.Persons.Add(new Recruiter { FirstName = "Gary", LastName = "Hodgson" });
 
-            Assert.IsInstanceOfType(agency, typeof(Agency));
+            Assert.IsType(typeof(Agency),agency);
         }
     }
 }

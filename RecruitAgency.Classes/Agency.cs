@@ -9,7 +9,7 @@ namespace RecruitAgency.Model
     {
         public Agency()
         {
-            Persons = new List<Person>();
+            Persons = new List<Recruiter>();
         }
         public DateTime DateCreated
         {
@@ -36,6 +36,6 @@ namespace RecruitAgency.Model
         public string Address { get; set; }
         public string Url { get; set; }
         public string Telephone { get; set; }
-        public virtual ICollection<Person> Persons{get;set;}
+        public virtual ICollection<Recruiter> Persons{get;set;}
     }
 }

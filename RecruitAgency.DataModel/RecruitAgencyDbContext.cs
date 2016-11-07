@@ -11,21 +11,23 @@ namespace RecruitAgency.Data
     public class RecruitAgencyDbContext : DbContext
     {
         
+        /*
         static RecruitAgencyDbContext()
         {
-            //Database.SetInitializer(null); // new RecruitmentAgencyDatabaseInitialiser());
+            Database.SetInitializer(new RecruitmentAgencyDatabaseInitialiser());
         }
-        
+        */
+
         public RecruitAgencyDbContext()
             : base(nameOrConnectionString: "recruitConnectionstring") 
         {
-            
+            Database.SetInitializer(new RecruitmentAgencyDatabaseInitialiser());
         }
 
-        public DbSet<Person> People { get; set; }
+        public DbSet<Recruiter> People { get; set; }
         public DbSet<Agency> Agents { get; set; }
 
-        public DbSet<JobOpportunity> Jobs { get; set; }
+        public DbSet<Opportunity> Jobs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

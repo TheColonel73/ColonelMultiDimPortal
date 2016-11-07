@@ -33,9 +33,9 @@ namespace RecruitAgency.Data
 
         // Code Camper repositories
 
-        public IPersonsRepository People { get { return GetRepo<IPersonsRepository>(); } }
+        public IRecruiterRepository People { get { return GetRepo<IRecruiterRepository>(); } }
         public IAgenciesRepository Agencies { get { return GetRepo<IAgenciesRepository>(); } }
-        public IJobsRepository Jobs { get { return GetRepo<IJobsRepository>(); } }
+        public IOpportunityRepository Jobs { get { return GetRepo<IOpportunityRepository>(); } }
 
         /// <summary>
         /// Save pending changes to the database

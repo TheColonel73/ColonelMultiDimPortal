@@ -44,8 +44,8 @@
     <Compile Include="Agency.cs" />
     <Compile Include="enums\EnumContactType.cs" />
     <Compile Include="interfaces\IModifyHistory.cs" />
-    <Compile Include="JobOpportunity.cs" />
-    <Compile Include="Person.cs" />
+    <Compile Include="Opportunity.cs" />
+    <Compile Include="Recruiter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

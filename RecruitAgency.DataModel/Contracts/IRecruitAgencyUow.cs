@@ -9,9 +9,9 @@
         void Commit();
 
         // Repositories
-        IPersonsRepository People { get; }
+        IRecruiterRepository People { get; }
         IAgenciesRepository Agencies { get; }
-        IJobsRepository Jobs { get; }
+        IOpportunityRepository Jobs { get; }
 
     }
 }

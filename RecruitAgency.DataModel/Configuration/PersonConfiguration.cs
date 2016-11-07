@@ -5,7 +5,7 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace RecruitAgency.Data.Configuration
 {
-    public class PersonConfiguration: EntityTypeConfiguration<Person>
+    public class PersonConfiguration: EntityTypeConfiguration<Recruiter>
     {
         string uniqueIndex = "UN_PersonName";
         public PersonConfiguration()
